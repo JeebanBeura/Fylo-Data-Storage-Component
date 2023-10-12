@@ -14,7 +14,7 @@ main{
     justify-content: center;
     min-height: 100vh;
     background-color: hsl(229, 57%, 11%);
-    background-image: url(/images/bg-desktop.png);
+    background-image: url(/bg-desktop.png);
     background-repeat: no-repeat;
     background-position-y: 100%;
     background-size: cover;
