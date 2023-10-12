@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@700&family=Hanken+Grotesk:wght@500;700;800&family=Montserrat:ital,wght@0,700;1,500&family=Raleway:wght@500;700&family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+    transition:0.2s ease-in-out;
+    animation:  2s;
+}
+main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: hsl(229, 57%, 11%);
+    background-image: url(../images/bg-desktop.png);
+    background-repeat: no-repeat;
+    background-position-y: 100%;
+    background-size: cover;
+    background-size: 100%;
+    font-size:0.875rem;
+    color:hsl(243, 100%, 93%);
+}
+
+.storage-bar {
+    position: relative;
+    padding: 2px;
+    margin-bottom: .5rem;
+    background-color: hsl(229, 57%, 11%);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.round-corner{
+    border-radius: 18px;
+}
+
+
+.storage__used {
+    position: relative;
+    width: 80%;
+    padding-block: 7px;
+    background-image: linear-gradient(to right, hsl(2, 100%, 79%), hsl(338, 99%, 66%));
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    animation: progressAnimation 6s;}
+
+.storage__used::after {
+    content: '';
+    position: absolute;
+    top: 1px;
+    right: 2px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color:white;
+}   
+.container{
+    display: flex;
+    align-items:flex-end;
+    justify-content: center;
+    gap:20px;
+}
+.card1, .card2{
+    background-color:hsl(228, 56%, 26%) ;
+    display: flex;
+    flex-direction: column; 
+    
+   
+}
+.card1:hover, .card2:hover{
+    box-shadow: hsl(229, 57%, 11%) 0px 20px 30px -10px;
+    transition: ease-in-out 0.35s;
+    
+}
+
+.card1{
+    width:350px;
+    border-radius:9px 90px 9px 9px;
+    padding: 41px 133px 41px 41px;
+}
+
+.card2{
+    width:540px;
+    border-radius:9px;
+    padding:35px;
+}
+.card2 p{
+    padding-bottom:17px;
+}
+.logo{
+    display: flex;
+    width: 100%;
+    height:41px;
+}
+.content{
+    display: flex;
+    gap:16px;
+}
+.content-image{
+    margin-top:33px;
+    border-radius: 9px;
+    padding:11px 14px;
+    background-color: hsl(229, 57%, 11%);
+    border:3px solid transparent
+}
+.content-image:hover{
+    background-color: hsl(228, 56%, 26%);
+    border:3px solid hsl(229, 57%, 11%);
+    transition: ease-in-out 0.4s; 
+}
+.gb{
+    font-weight: 700;
+}
+.description{
+    display: flex;
+}
+.min-gb, .max-gb{
+    font-weight: 600;
+}
+.max-gb{
+    position:absolute;
+    right: 0;
+}
+.gb-scroll{
+    position: relative;
+}
+
+.gb-left{
+    font-size: 0.6rem;
+    color:hsl(229, 7%, 55%);
+}
+.over-card{
+    position: absolute;
+    right:5px;
+    bottom:10px;
+    float:right;
+    display: flex;
+    color:black;
+    align-items: center;
+    justify-content: center;
+    border-radius: 7px 7px 0 7px;
+    padding:12px 14px;
+    margin-bottom: 2px;
+    width:30%;
+    border-bottom-right-radius:px;
+    background-color: white;
+}
+.box{
+    position: relative;
+}
+svg{
+    position: absolute;
+    top: -28px;
+    right: 0;
+}
+
+
+
+
+@media only screen and (max-width:950px){
+    body{
+        background-image: url(../images/bg-mobile.png);
+        background-position-y: 0;
+        background-repeat: round;
+    }
+    main{
+        width:95%;
+    }
+    .container{
+        flex-direction: column;
+    }
+    .card1, .card2{
+        width:100%;
+    }
+    svg{
+        display: none;
+    }
+    .over-card{
+        
+        width: 45%;
+        padding:20px 10px;
+        border-radius: 7px;
+        left:100px;
+        bottom:-150px;
+    }
+    
+}
